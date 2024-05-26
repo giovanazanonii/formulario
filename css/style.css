@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-color: #997697;
+}
+.classic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  font-family: "Arial", sans-serif;
+}
+.inicio {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.topo {
+  background-color: #5f405f;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.circle-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+  background-color: #634160;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 51%;
+}

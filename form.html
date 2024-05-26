@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/form.css">
+  <title>FORMULÁRIO</title>
+
+  <script>
+    function validateForm() {
+      const form = document.forms["armarioForm"];
+      const fields = ["setor", "codigo", "tamanho", "preco", "status", "observacao", "data", "fechadura"];
+      for (let field of fields) {
+        if (form[field].value === "") {
+          alert("Por favor, preencha todos os campos.");
+          return false;
+        }
+      }
+      return true;
+    }
+
+</script>
+</head>
+
+<body>
+  <table align="center" border="1">
+    <h4 align="center">ARMÁRIOS</h4>
+    <tr>
+      <form action="cadastra_armario.php" method="post">
+    <tr>
+      <td>Setor:</td>
+      <td><select name="setor">
+          <option value='1'>Recepção</option>
+          <option value='2'>Biblioteca</option>
+          <option value='3'>Sala dos Professores</option>
+        </select>
+      </td>
+
+    </tr>
+    <tr>
+      <td>Codigo:</td>
+      <td><input type="text" name="codigo"></td>
+    </tr>
+    <tr>
+      <td>Tamanho:</td>
+      <td><select name="tamanho">
+          <option value='P'>Pequeno</option>
+          <option value='M'>Médio</option>
+          <option value='G'>Grande</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Preco:</td>
+      <td><input type="text" name="preco"></td>
+    </tr>
+    <tr>
+      <td>Status:</td>
+      <td><select name="status">
+          <option value='A'>Ativo</option>
+          <option value='I'>Inativo</option>
+          <option value='C'>Manutenção</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Observação:</td>
+      <td><input type="text" name="observacao"></td>
+    </tr>
+    <tr>
+      <td>Data:</td>
+      <td><input type="date" name="data"></td>
+    </tr>
+    <tr>
+      <td>Fechadura:</td>
+      <td><select name="fechadura">
+          <option value='A'>Senha</option>
+          <option value='B'>Biometria</option>
+          <option value='C'>Chave</option>
+        </select>
+      </td>
+    </tr>
+    <td align="center" colspan="2"><input type="submit" value="Cadastrar"></td>
+  </table>
+</body>
+
+</html>
